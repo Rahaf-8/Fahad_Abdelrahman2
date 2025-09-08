@@ -13,12 +13,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * {
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     html,
     body {
-      height: 100%
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     :root {
@@ -31,7 +34,7 @@
       --btn-xpad: 5px;
       --icon-gap: 18px;
       --icon-size: 18px;
-     
+      --share-gap: 10px; /* Gap between container and share button */
     }
 
     @font-face {
@@ -44,13 +47,13 @@
     }
 
     html {
-      font-family: 'Cormorant Garamond', serif
+      font-family: 'Cormorant Garamond', serif;
     }
 
     :lang(ar) {
       font-family: 'Adir', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
       direction: rtl;
-      font-weight: 400
+      font-weight: 400;
     }
 
     body {
@@ -58,7 +61,7 @@
           #f5f6f7 0%, #eef0f3 8%, #dee1e9 16%, #cdd1dd 24%,
           #b4b9cc 32%, #9aa2ba 40%, #7d86a7 50%, #656e97 60%,
           #485485 70%, #2b396f 85%, #0b173b 100%);
-      min-height: calc(var(--vh)*100);
+      min-height: calc(var(--vh) * 100);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -68,7 +71,7 @@
     .container {
       width: 90%;
       max-width: var(--page-width);
-      margin-inline: auto
+      margin-inline: auto;
     }
 
     .logo {
@@ -114,7 +117,7 @@
 
     .container {
       margin-top: 0px;
-      margin-bottom: 100px;
+      margin-bottom: var(--share-gap);
       padding: var(--card-pad);
       border-radius: var(--card-radius);
       border: 1px solid rgba(255, 255, 255, .55);
@@ -124,9 +127,7 @@
       align-items: stretch;
       max-height: 520px;
       overflow-y: auto;
-    
     }
-
 
     .upper {
       display: flex;
@@ -136,7 +137,6 @@
       margin-bottom: 15px;
       padding-bottom: 3px;
       margin-top: 10px;
-      ;
     }
 
     .upper a {
@@ -146,10 +146,10 @@
     }
 
     .upper a i {
-      font-size: var(--icon-size)
+      font-size: var(--icon-size);
     }
 
-    @media(hover:hover) {
+    @media (hover: hover) {
       .upper a:hover {
         color: #ffffff
       }
@@ -182,10 +182,35 @@
       line-height: 1
     }
 
-    @media(hover:hover) {
+    @media (hover: hover) {
       .link:hover {
         background: #122e53;
         color: #fff
+      }
+    }
+
+    /* SHARE BUTTON */
+    .share {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: var(--share-gap); /* Use the same gap as Contact Us */
+      margin-bottom: 60px; /* Optional: Adds some extra space at the bottom */
+    }
+
+    .share a {
+      text-decoration: none;
+      color: #c5d1e2;
+      line-height: 0;
+    }
+
+    .share a i {
+      font-size: 20px;
+    }
+
+    @media (hover: hover) {
+      .share a:hover {
+        color: #ffffff;
       }
     }
   </style>
@@ -228,6 +253,12 @@
       href="https://www.google.com/maps/place/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B1+%D8%A7%D9%84%D8%B1%D8%A7%D8%A6%D8%AF%D8%A9+%D9%84%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA+%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9%E2%80%AD/@21.6256581,39.2080363,17z"
       target="_blank">
       <i class="fas fa-map-marker-alt"></i> Location
+    </a>
+  </div>
+
+  <div class="share">
+    <a href="https://fahadabdelrahman.netlify.app/" target="_blank" aria-label="Share">
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
     </a>
   </div>
 
