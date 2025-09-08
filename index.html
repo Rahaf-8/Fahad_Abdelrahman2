@@ -34,7 +34,7 @@
       --btn-xpad: 0px;
       --icon-gap: 18px;
       --icon-size: 18px;
-      --share-gap: 10px; /* Gap between container and share button */
+      --share-gap: 10px;
     }
 
     @font-face {
@@ -128,7 +128,6 @@
       max-height: 520px;
       overflow-y: auto;
       min-height: 320px;
-
     }
 
     .upper {
@@ -196,7 +195,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: var(--share-gap); /* Use the same gap as Contact Us */
+      margin-top: var(--share-gap); /* Same as the gap under "Contact Us.." */
       margin-bottom: 10px; /* Optional: Adds some extra space at the bottom */
     }
 
@@ -259,17 +258,25 @@
   </div>
 
   <div class="share">
-    <a href="https://fahadabdelrahman.netlify.app/" target="_blank" aria-label="Share">
+    <a href="#" onclick="shareContent()" target="_blank" aria-label="Share">
       <i class="fa-solid fa-arrow-up-from-bracket"></i>
     </a>
   </div>
 
   <script>
-    // mobile viewport height fix so spacing stays identical
-    (function () {
-      const setVh = () => document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-      setVh(); window.addEventListener('resize', setVh);
-    })();
+    function shareContent() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Fahad Abdelrahman',
+          text: 'Check out this website!',
+          url: 'https://fahadabdelrahman.netlify.app/'
+        })
+        .then(() => console.log('Content shared successfully!'))
+        .catch((error) => console.log('Error sharing content:', error));
+      } else {
+        alert('Sharing not supported on this device/browser');
+      }
+    }
   </script>
 </body>
 
