@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Fahad Abdelrahman</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    @font-face {
+      font-family: 'Adir';
+      src: url('./webfonts/Adir.otf') format('opentype'),
+           url('./webfonts/AdirFont.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+
+    :root{
+      --radius: 14px;
+      --gap: 10px;
+      --btn-h: 42px;
+      --page-width: 310px;   /* smaller container */
+    }
+
+    html{ font-family:'Cormorant Garamond', serif; height:100%; }
+    :lang(ar){ font-family:'Adir', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; direction:rtl; font-weight:400; }
+
+   
+body{
+  
+background: #0b173b; /* fallback (deep navy) */
+background: linear-gradient(
+  to bottom left,
+  #f5f6f7 0%,
+  #eef0f3 8%,
+  #dee1e9 16%,
+  #cdd1dd 24%,
+  #b4b9cc 32%,
+  #9aa2ba 40%,
+  #7d86a7 50%,
+  #656e97 60%,
+  #485485 70%,
+  #2b396f 85%,
+  #0b173b 100%
+);
+
+}
+
+
+    .logo, .container{ width:100%; max-width:min(var(--page-width), 90vw); margin-inline:auto; }
+
+    .logo{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      margin-top: clamp(10px, 5.4svh, 30px);
+      margin-bottom: 0;
+    }
+    .logo .image-logo{
+     width: clamp(150px, 21svh, 180px);
+      height: clamp(110px, 17svh, 140px);
+      background-image:url(./Images/bin\ ayed\ logo\ ابيض.png);
+      background-size:cover; background-position:center;
+      margin-bottom: clamp(4px, 1svh, 6px);
+    }
+    .logo p[lang="ar"]:first-of-type{
+      margin: 0;
+      font-size: clamp(16px, 2.4svh, 18px);
+      font-weight: 300;
+      line-height: 1.2;
+    transform: translateY(-10px);
+        color: #182e4c;
+    }
+    .logo p[lang="ar"]:nth-of-type(2){
+      margin: 2px 0 0 0;
+      font-size: clamp(17px, 2.6svh, 19px);
+      font-weight: 600;
+      line-height: 1.22;
+      color: #0b173b;
+      transform: translateY(-10px);
+    }
+    .logo .c-l{
+  margin-top: 0;         
+  display: inline-block;  
+  transform: translateY(10px);
+   font-size: clamp(12px, 1.9svh, 13.5px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.95);
+
+    }
+    .container{
+      margin-top: 0;
+      margin-bottom: clamp(10px, 2.4svh, 14px);
+      padding: clamp(12px, 2.4svh, 16px);
+      border-radius: var(--radius);
+      border: 0.5px solid rgba(255,255,255,0.95);      
+      background: rgba(255,255,255,0.06);
+      display:flex; flex-direction:column; gap: clamp(8px, 1.6svh, 10px);
+      text-align:center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .container .upper{
+      display:flex; justify-content:center; align-items:center;
+      gap: clamp(10px, 2svh, 14px);
+      margin-bottom: clamp(4px, 1svh, 6px);
+    }
+    .container .upper a{ color:#e9eef5; font-size: clamp(16px, 2.2svh, 18px); text-decoration:none; }
+
+    .link{
+      position:relative; display:flex; align-items:center; justify-content:center;
+      height: clamp(34px, 6svh, var(--btn-h));
+      margin: clamp(6px, 1.2svh, 7px) 0;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+      color:#e8edf6; font-size: clamp(14px, 2svh, 15.5px); font-weight:600; text-decoration:none;
+      box-shadow: inset 0 6px 14px rgba(0,0,0,0.10), 0 5px 12px rgba(0,0,0,0.06);
+      transition: background .2s ease, color .2s ease, transform .15s ease;
+    }
+    .link i{ position:absolute; left: clamp(10px, 2.4svh, 14px); font-size: clamp(16px, 2.1svh, 17px); }
+    .link:hover{ background:#122e53; color:#fff; }
+
+    @media (max-height: 640px){
+      .logo{ margin-top: clamp(8px, 5svh, 20px); }
+      .logo .image-logo{ width: clamp(104px, 16svh, 136px); height: clamp(104px, 16svh, 136px); }
+      .link{ height: clamp(32px, 5.4svh, 38px); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <div><div class="image-logo"></div></div>
+    <p lang="ar">بن عايض</p>
+    <p lang="ar">للتسويق والاستثمار العقاري</p>
+    <p class="c-l">Contact Us..</p>
+  </div>
+
+  <div class="container">
+    <div class="upper">
+      <a href="https://wa.me/966558649533" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/fahad-abdulrahman-050a93368/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:info@company.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <a class="link" href="https://www.tiktok.com/@bin_ayde?_t=zs-8zqgxotsx0c&_r=1" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a class="link" href="https://www.instagram.com/username" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a class="link" href="https://twitter.com/username" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i> X
+    </a>
+    <a class="link" href="https://www.facebook.com/profile.php?id=61577798674014" target="_blank">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+    <a class="link" href="https://www.google.com/maps/place/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B1+%D8%A7%D9%84%D8%B1%D8%A7%D8%A6%D8%AF%D8%A9+%D9%84%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA+%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9%E2%80%AD/@21.6256581,39.2080363,17z" target="_blank">
+      <i class="fas fa-map-marker-alt"></i> Location
+    </a>
+  </div>
+</body>
+</html>
