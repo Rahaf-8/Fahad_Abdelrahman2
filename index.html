@@ -22,6 +22,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     :root {
@@ -125,7 +126,7 @@
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      max-height: 520px;
+     max-height: 520px;
       overflow-y: auto;
       min-height: 320px;
     }
@@ -195,8 +196,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: var(--share-gap); /* Same as the gap under "Contact Us.." */
-      margin-bottom: 10px; /* Optional: Adds some extra space at the bottom */
+      margin-top: var(--share-gap);
+      /* Same as the gap under "Contact Us.." */
+      margin-bottom: 10px;
+      /* Optional: Adds some extra space at the bottom */
     }
 
     .share a {
@@ -213,7 +216,8 @@
       .share a:hover {
         color: #ffffff;
       }
-    }
+
+}
   </style>
 </head>
 
@@ -241,7 +245,7 @@
     <a class="link" href="https://www.tiktok.com/@bin_ayde?_t=zs-8zqgxotsx0c&_r=1" target="_blank">
       <i class="fab fa-tiktok"></i> TikTok
     </a>
-    <a class="link" href="https://www.instagram.com/username" target="_blank">
+    <a class="link" href="https://www.instagram.com/bin.ayde/?igsh=MW54bGIzN2Vja3loOQ%3D%3D&utm_source=qr#" target="_blank">
       <i class="fab fa-instagram"></i> Instagram
     </a>
     <a class="link" href="https://x.com/binayed00" target="_blank">
@@ -271,8 +275,8 @@
           text: 'Check out this website!',
           url: 'https://fahadabdelrahman.netlify.app/'
         })
-        .then(() => console.log('Content shared successfully!'))
-        .catch((error) => console.log('Error sharing content:', error));
+          .then(() => console.log('Content shared successfully!'))
+          .catch((error) => console.log('Error sharing content:', error));
       } else {
         alert('Sharing not supported on this device/browser');
       }
